@@ -15,3 +15,8 @@ micedat[12, 2]
 weight <- micedat$Bodyweight
 weight[11]
 
+#4
+length(weight)
+
+#5
+mean(weight[13:24])
