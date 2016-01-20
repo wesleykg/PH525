@@ -12,3 +12,6 @@ str(micedat)
 micedat[12, 2]
 
 #3
+weight <- micedat$Bodyweight
+weight[11]
+
