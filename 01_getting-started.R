@@ -6,3 +6,9 @@ download(url, destfile=filename)
 
 #1
 micedat <- read.csv(filename)
+str(micedat)
+
+#2
+micedat[12, 2]
+
+#3
