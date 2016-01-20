@@ -20,3 +20,20 @@ length(weight)
 
 #5
 mean(weight[13:24])
+
+#6
+set.seed(1)
+sample(weight[13:24], size = 1)
+
+## dplyr video
+library(dplyr)
+
+controls <- filter(micedat, Diet == "chow")
+controls <- select(controls, Bodyweight)
+unlist(controls)
+
+controls <- filter(micedat, Diet == "chow") %>% select(Bodyweight) %>% unlist
+mean(controls)
+
+##dplyr exercises
+
