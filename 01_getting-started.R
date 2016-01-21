@@ -51,7 +51,7 @@ primdat <- filter(mammdat, order == 'Primates')
 nrow(primdat)
 
 #3
-
+class(primdat)
 
 
 
