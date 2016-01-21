@@ -53,9 +53,11 @@ nrow(primdat)
 #3
 class(primdat)
 
+#4
+slpdat <- select(primdat, sleep_total)
+class(slpdat)
 
-
-
+#5
 
 
 
