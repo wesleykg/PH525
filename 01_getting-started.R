@@ -47,7 +47,10 @@ mammdat <- read.csv(filename)
 class(mammdat)
 
 #2
+primdat <- filter(mammdat, order == 'Primates')
+nrow(primdat)
 
+#3
 
 
 
