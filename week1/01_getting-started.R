@@ -61,4 +61,4 @@ class(slpdat)
 unlist(slpdat) %>% mean()
 
 #6
-
+summarize(slpdat, mean(sleep_total))
