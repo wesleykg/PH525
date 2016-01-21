@@ -58,7 +58,7 @@ slpdat <- select(primdat, sleep_total)
 class(slpdat)
 
 #5
+unlist(slpdat) %>% mean()
 
-
-
+#6
 
