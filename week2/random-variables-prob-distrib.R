@@ -11,7 +11,10 @@ mean(x)
 
 #2
 set.seed(1)
-ransam <- unlist( sample(x, size = 5) )
+ransam <- sample(x, size = 5)
 abs(mean(x) - mean(ransam))
 
 #3
+set.seed(5)
+ransam <- sample(x, size = 5)
+abs(mean(x) - mean(ransam))
