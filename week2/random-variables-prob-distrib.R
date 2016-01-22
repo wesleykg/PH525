@@ -32,7 +32,3 @@ x <- unlist( read.csv(filename) ) # weight for entire population
 
 
 
-
-
-
-
