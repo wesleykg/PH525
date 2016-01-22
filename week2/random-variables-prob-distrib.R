@@ -7,3 +7,6 @@ download(url, destfile=filename)
 x <- unlist( read.csv(filename) ) # weight for entire population
 
 #1
+mean(x)
+
+#2
