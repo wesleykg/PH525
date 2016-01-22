@@ -10,3 +10,8 @@ x <- unlist( read.csv(filename) ) # weight for entire population
 mean(x)
 
 #2
+set.seed(1)
+ransam <- unlist( sample(x, size = 5) )
+abs(mean(x) - mean(ransam))
+
+#3
