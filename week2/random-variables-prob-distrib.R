@@ -1,7 +1,7 @@
 ## Random variable epopulationercises
 
 library(downloader) 
-url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/epopulationtdata/femaleControlsPopulation.csv"
+url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/femaleControlsPopulation.csv"
 filename <- basename(url)
 download(url, destfile=filename)
 population <- unlist( read.csv(filename) )
@@ -23,12 +23,37 @@ abs(mean(population) - mean(ransam))
 
 #1
 
+set.seed(1)
 n <- 1000
-null <- vector("numeric",n)
-for (i in 1:n) {
-  control <- sample(population,12)
-  treatment <- sample(population,12)
-  null[i] <- mean(treatment) - mean(control)
+averages5 <- vector("numeric",n)
+for(i in 1:n){
+  X <- sample(population, 5)
+  averages5[i] <- mean(X)
 }
+hist(averages5) ##take a look
+mean( abs( averages5 - mean(population) ) > 1)
 
+#2
+
+set.seed(1)
+n <- 10000
+averages5 <- vector("numeric",n)
+for(i in 1:n){
+  X <- sample(population, 5)
+  averages5[i] <- mean(X)
+}
+hist(averages5) ##take a look
+mean( abs( averages5 - mean(population) ) > 1)
+
+#3
+
+set.seed(1)
+n <- 1000
+averages5 <- vector("numeric",n)
+for(i in 1:n){
+  X <- sample(population, 50)
+  averages5[i] <- mean(X)
+}
+hist(averages5) ##take a look
+mean( abs( averages5 - mean(population) ) > 1)
 
