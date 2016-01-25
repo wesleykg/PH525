@@ -22,7 +22,6 @@ abs(mean(population) - mean(ransam))
 ## Null distribution epopulationercises
 
 #1
-
 set.seed(1)
 n <- 1000
 averages5 <- vector("numeric",n)
@@ -34,7 +33,6 @@ hist(averages5) ##take a look
 mean( abs( averages5 - mean(population) ) > 1)
 
 #2
-
 set.seed(1)
 n <- 10000
 averages5 <- vector("numeric",n)
@@ -46,7 +44,6 @@ hist(averages5) ##take a look
 mean( abs( averages5 - mean(population) ) > 1)
 
 #3
-
 set.seed(1)
 n <- 1000
 averages5 <- vector("numeric",n)
@@ -56,4 +53,18 @@ for(i in 1:n){
 }
 hist(averages5) ##take a look
 mean( abs( averages5 - mean(population) ) > 1)
+
+## Probability ditribution excercises
+
+library(gapminder)
+data("gapminder")
+head(gapminder)
+
+library(dplyr)
+
+x <- gapminder %>% filter(year == '1952')
+x <- x$lifeExp
+hist(x)
+
+#1
 
