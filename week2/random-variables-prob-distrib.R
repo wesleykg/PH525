@@ -67,4 +67,6 @@ x <- x$lifeExp
 hist(x)
 
 #1
+mean(x <= 40)
 
+#2
