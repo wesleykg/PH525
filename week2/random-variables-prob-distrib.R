@@ -70,3 +70,8 @@ hist(x)
 mean(x <= 40)
 
 #2
+
+mean(x <= 60) - mean(x <= 40)
+
+#sapply() on a custom function
+
