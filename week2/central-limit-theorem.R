@@ -69,4 +69,4 @@ randsample2 <- sample(y, size = 25)
 mean(randsample2)
 
 #7
-
+abs(( mean(randsample2) - mean(randsample) ) - ( mean(y) - mean(x) ))
