@@ -92,6 +92,9 @@ filename <- basename(url)
 download(url, destfile=filename)
 dat <- na.omit( read.csv(filename) )
 
+library(dplyr)
+library(rafalib)
+
 #1
 pnorm(1) - pnorm(-1)
 
@@ -102,15 +105,18 @@ pnorm(2) - pnorm(-2)
 pnorm(3) - pnorm(-3)
 
 #4
+y <- dat %>% filter(Sex == 'M' & Diet == 'chow') %>% 
+  select(Bodyweight) %>% unlist
 
+z <- ( y - mean(y) ) / popsd(y)
+mean( abs(z) <= 1 )
 
+#5
+z <- ( y - mean(y) ) / popsd(y)
+mean( abs(z) <= 2)
 
-
-
-
-
-
-
-
+#6
+z <- ( y - mean(y) ) / popsd(y)
+mean( abs(z) <= 3 )
 
 
