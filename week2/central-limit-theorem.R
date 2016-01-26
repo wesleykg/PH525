@@ -19,7 +19,14 @@ n <- 1000
 averages50 <- vector("numeric",n)
 for(i in 1:n){
   X <- sample(x, 50)
-  averages5[i] <- mean(X)
+  averages50[i] <- mean(X)
 }
 
 #1
+
+hist(averages50)
+hist(averages5)
+
+#2
+
+mean(averages50 <= 25) - mean(averages50 <= 23)
