@@ -83,3 +83,13 @@ set.seed(1)
 y_fem_samp <- sample(y_fem, size = 25)
 
 abs( ( mean(y_fem_samp) - mean(x_fem_samp) ) - ( mean(y_fem) - mean(x_fem) ) )
+
+# Central limit theorem exercises
+
+library(downloader) 
+url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/mice_pheno.csv"
+filename <- basename(url)
+download(url, destfile=filename)
+dat <- na.omit( read.csv(filename) )
+
+#1
