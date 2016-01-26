@@ -32,7 +32,7 @@ mean(averages50 <= 25) - mean(averages50 <= 23)
 #3
 pnorm( (25-23.9) / 0.43)  - pnorm( (23-23.9) / 0.43) 
 
-## Central limit theorem exercises
+## population sample estimate exercises
 
 library(downloader) 
 url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/mice_pheno.csv"
@@ -70,3 +70,16 @@ mean(randsample2)
 
 #7
 abs(( mean(randsample2) - mean(randsample) ) - ( mean(y) - mean(x) ))
+
+#8
+x_fem <- dat %>% filter(Diet =='chow' & Sex == 'F') %>% 
+  select(Bodyweight) %>% unlist
+y_fem <- dat %>% filter(Diet =='hf' & Sex == 'F') %>% 
+  select(Bodyweight) %>% unlist
+
+set.seed(1)
+x_fem_samp <- sample(x_fem, size = 25)
+set.seed(1)
+y_fem_samp <- sample(y_fem, size = 25)
+
+abs( ( mean(y_fem_samp) - mean(x_fem_samp) ) - ( mean(y_fem) - mean(x_fem) ) )
