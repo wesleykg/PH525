@@ -52,9 +52,9 @@ library(rafalib)
 popsd(x)
 
 #3
-
-
-
+set.seed(1)
+randsample <- sample(x, size = 25)
+mean(randsample)
 
 
 
