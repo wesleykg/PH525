@@ -64,5 +64,9 @@ mean(y)
 popsd(y)
 
 #6
+set.seed(1)
+randsample2 <- sample(y, size = 25)
+mean(randsample2)
 
+#7
 
