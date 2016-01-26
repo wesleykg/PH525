@@ -61,6 +61,8 @@ y <- dat %>% filter(Diet =="hf" & Sex == "M") %>% select(Bodyweight) %>% unlist
 mean(y)
 
 #5
+popsd(y)
 
+#6
 
 
