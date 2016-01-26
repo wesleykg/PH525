@@ -43,8 +43,18 @@ dat <- na.omit( dat ) # Removes lines containing NAs
 
 #1
 library(dplyr)
-x <- dat %>% filter(Diet == "chow" & Sex == "M")
-mean(x$Bodyweight)
+x <- dat %>% filter(Diet == "chow" & Sex == "M") %>% 
+  select(Bodyweight) %>% unlist
+mean(x)
 
 #2
+library(rafalib)
+popsd(x)
+
+#3
+
+
+
+
+
 
