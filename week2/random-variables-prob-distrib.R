@@ -74,4 +74,10 @@ mean(x <= 40)
 mean(x <= 60) - mean(x <= 40)
 
 #sapply() on a custom function
+prop = function(q) {
+  mean(x <= q)
+}
 
+qs = seq(from = min(x), to = max(x), length = 20)
+
+props = sapply(qs, prop)
