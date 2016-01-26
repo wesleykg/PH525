@@ -93,5 +93,24 @@ download(url, destfile=filename)
 dat <- na.omit( read.csv(filename) )
 
 #1
-
 pnorm(1) - pnorm(-1)
+
+#2
+pnorm(2) - pnorm(-2)
+
+#3
+pnorm(3) - pnorm(-3)
+
+#4
+
+
+
+
+
+
+
+
+
+
+
+
