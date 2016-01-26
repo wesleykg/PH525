@@ -23,16 +23,13 @@ for(i in 1:n){
 }
 
 #1
-
 hist(averages50)
 hist(averages5)
 
 #2
-
 mean(averages50 <= 25) - mean(averages50 <= 23)
 
 #3
-
 pnorm( (25-23.9) / 0.43)  - pnorm( (23-23.9) / 0.43) 
 
 ## Central limit theorem exercises
@@ -45,7 +42,9 @@ dat <- read.csv(filename)
 dat <- na.omit( dat ) # Removes lines containing NAs
 
 #1
+library(dplyr)
+x <- dat %>% filter(Diet == "chow" & Sex == "M")
+mean(x$Bodyweight)
 
-
-
+#2
 
