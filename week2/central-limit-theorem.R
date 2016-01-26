@@ -56,5 +56,11 @@ set.seed(1)
 randsample <- sample(x, size = 25)
 mean(randsample)
 
+#4
+y <- dat %>% filter(Diet =="hf" & Sex == "M") %>% select(Bodyweight) %>% unlist
+mean(y)
+
+#5
+
 
 
