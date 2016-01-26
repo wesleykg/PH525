@@ -30,3 +30,7 @@ hist(averages5)
 #2
 
 mean(averages50 <= 25) - mean(averages50 <= 23)
+
+#3
+
+pnorm( (25-23.9) / 0.43)  - pnorm( (23-23.9) / 0.43) 
